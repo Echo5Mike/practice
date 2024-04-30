@@ -74,9 +74,24 @@ const isLonger = (string1, string2) => {
 }
 console.log(isLonger("Raul", "Marquez"))
 // Write a function named greaterNum that takes two numbers as arguments and returns whichever number is the greater (higher) number.
+const greaterNum = (num1, num2) => {
+  let result = num1 > num2 ? `${num1} "is bigger"` : `${num2} "is bigger"`
+  return result
+}
+console.log(greaterNum(10, 15))
 
 // Write a function named yelling that takes a string as an argument and return the string in all uppercase case letters.
 
+const yelling = (str) => {
+  if (typeof str === "string") {
+    return str.toUpperCase()
+  } else {
+    return "not a string"
+  }
+}
+
+console.log(yelling("raul"))
+console.log(yelling(1))
 // ---------------------------------------------
 // ---------------------------------------------
 // ---------------------------------------------
