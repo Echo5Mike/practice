@@ -95,27 +95,3 @@ console.log(yelling(1))
 // ---------------------------------------------
 // ---------------------------------------------
 // ---------------------------------------------
-
-// Bonus
-// The World Translator
-
-// Write a function named helloWorld that takes a language code (e.g. "es", "de", "en") as an argument and returns "Hello World!" in the given language. Ensure you function works for at least 5 languages.
-// Have your function default to returning English.
-// The Pluralizer
-
-// Write a function named pluralizer that takes a number and a singular noun as arguments and returns the number and pluralized form of the noun, if necessary.
-// Enhance your function so it can handle a few collective nouns like "sheep", "goose", "child", "person" and "species".
-// pluralizer(5, "cat")
-// // output: "5 cats"
-
-// pluralizer(1, "dog")
-// // output: "1 dog"
-
-// pluralizer(9, "dog")
-// // output: "9 dogs"
-
-// pluralizer(1, "people")
-// // output: "1 person"
-
-// pluralizer(3, "people")
-// // output: "3 people"
