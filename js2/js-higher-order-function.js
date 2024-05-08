@@ -130,12 +130,77 @@ const makesWackyWords = ["simba", "nala", "zazu", "rafiki"]
 const secondLetterCap = (array) => {
   let temp = array.map((value) => {
     let result = value.split("").join("")
-    console.log("result", result)
+    let result2 = []
 
+    for (let i = 0; i < value.length; i++) {
+      if (i % 2 !== 0) {
+        result2.push(result[i].toUpperCase())
+      } else {
+        result2.push(result[i])
+      }
+    }
+
+    return result2.join("")
   })
   return temp
 }
 
 console.log(secondLetterCap(makesWackyWords))
-// secondLetterCap(makesWackyWords) 
 // output: ["sImBa", "nAlA", "zAzU", "rAfIkI"]
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// Create a function that takes in a string and returns a new string with all the vowels removed.
+const str = "javascript is awesome"
+
+// const voweFilter = (str) => {
+//   let strArray = str.split("")
+//   let result = strArray.filter((value) => {
+//     if (value != "a" && value != "e" && value != "i" && value != "o" && value != "u") {
+//       return value
+//     }
+//   })
+//   return result.join("")
+// }
+
+const voweFilter = (str) => str.split("").filter((value) => value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u")
+
+console.log(voweFilter(str))
+// output: "jvscrpt s wsm"
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// Create a function that takes in a string containing numbers and returns an array with each number at its own index and converted to the data type of number.
+
+const stringOfNumbers = "4574328"
+
+const strNums = (str) => str.split("").map((value) => Number(value))
+
+console.log(strNums(stringOfNumbers))
+// output: [4, 5, 7, 4, 3, 2, 8]
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+
+const arrNums3 = [3, 7, 10, 5, 4, 3]
+const arrNums4 = [7, 8, 2, 1, 5, 4]
+
+const noDubs = (numArray1, numArray2) => [...new Set([...numArray1, ...numArray2])]
+
+console.log(noDubs(arrNums3, arrNums4))
+// output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+// Create a function that takes in an array of mixed data types and returns the first value that is a string. HINT: look into the JavaScript .find() method.
+const allTheData = [7, null, true, 2, "yo!", false, 4, "hello!"]
+
+const firstString = (arr) => arr.find((element) => typeof element === "string")
+
+console.log(firstString(allTheData))
+// output: "yo!"
