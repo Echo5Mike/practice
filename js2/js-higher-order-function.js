@@ -123,7 +123,7 @@ console.log(noFalseValues(filterArrayValues))
 // --------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------
 
-// Create a function that takes in an array of strings and returns an array of strings with every other letter capitalized.
+// Create a function that takes in an array of strings and returns an maiarray of strings with every other letter capitalized.
 
 const makesWackyWords = ["simba", "nala", "zazu", "rafiki"]
 
