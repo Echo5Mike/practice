@@ -1,13 +1,23 @@
 import "./App.css";
-import Footer from "./components/Footer";
+
 import Header from "./components/Header";
+import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
+  const display = [];
+  const onClick = () => {
+    console.log("hello");
+  };
   return (
     <>
       <Header />
-      <h2>Hola Mundo</h2>
-      <Footer />
+      <div className="counters">
+        {display.map((value, index) => {
+          return <Counter header={onClick} />;
+        })}
+        {/* <Counter /> */}
+      </div>
     </>
   );
 }
